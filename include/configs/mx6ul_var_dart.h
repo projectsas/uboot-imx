@@ -197,9 +197,7 @@
 			"setenv fdt_addr 0x84000000; " \
 			"setenv loadaddr 0x84600000; " \
 		"else " \
-			"if test $sdram_size -lt 512; then " \
-				"setenv cma_size cma=64MB; " \
-			"fi; " \
+			"setenv cma_size cma=64MB; " \
 		"fi;\0" \
 	"findfdt="\
 		"if test $fdt_file = undefined; then " \
@@ -310,7 +308,7 @@
 
 /* NAND stuff */
 #define CONFIG_NAND_MXS
-#define CONFIG_NAND_MXS_BCH_LEGACY_GEO
+/*#define CONFIG_NAND_MXS_BCH_LEGACY_GEO*/
 #define CONFIG_SYS_MAX_NAND_DEVICE	1
 #define CONFIG_SYS_NAND_BASE		0x40000000
 #define CONFIG_SYS_NAND_5_ADDR_CYCLE
